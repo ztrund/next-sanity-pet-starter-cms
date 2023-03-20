@@ -1,3 +1,3 @@
-import puppies from "./puppies";
+import about from "./about";
 
-export const schemaTypes = [puppies]
+export const schemaTypes = [about]
