@@ -35,7 +35,7 @@ export default defineConfig({
                             ),
 
                         // Regular document types
-                        // S.documentTypeListItem("about").title("About Us"),
+                        S.documentTypeListItem("puppies").title("Puppies"),
                     ]),
         }),
         visionTool()
