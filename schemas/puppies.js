@@ -19,7 +19,13 @@ export default {
             "title": "Gender",
             "name": "gender",
             "type": "string",
-            "description": "The gender of the puppy."
+            "description": "The gender of the puppy.",
+            "options": {
+                "list": [
+                    "Male",
+                    "Female"
+                ],
+            }
         },
         {
             "title": "Color",
@@ -50,14 +56,27 @@ export default {
             "title": "Photos",
             "name": "photos",
             "type": "array",
-            "of": [{"type": "image", "options": {"metadata": ["palette"]}}],
+            "of": [{"type": "image", "options": {"metadata": ["palette"], "hotspot": true}}],
             "description": "One or more photos of the puppy."
         },
         {
             "title": "Availability",
             "name": "availability",
             "type": "string",
-            "description": "The availability of the puppy. This can be 'available', 'reserved', or 'sold'."
+            "description": "The availability of the puppy. This can be 'available', 'reserved', or 'sold'.",
+            "options": {
+                "list": [
+                    "Available",
+                    "Reserved",
+                    "Sold"
+                ]
+            }
+        },
+        {
+            "title": "Price",
+            "name": "price",
+            "type": "number",
+            "description": "The price of the item in USD."
         }
     ]
 }
