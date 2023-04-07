@@ -1,3 +1,5 @@
+import media from "./media"
+
 export default {
     "title": "Puppies",
     "name": "puppies",
@@ -40,24 +42,17 @@ export default {
             "description": "The weight of the puppy in pounds."
         },
         {
-            "title": "Temperament",
-            "name": "temperament",
-            "type": "array",
-            "of": [{"type": "string"}],
-            "description": "The temperament of the puppy. This can be a list of one or more traits."
-        },
-        {
             "title": "Description",
             "name": "description",
             "type": "text",
             "description": "A description of the puppy, including any important details or personality traits."
         },
         {
-            "title": "Photos",
-            "name": "photos",
+            "title": "Media Items",
+            "name": "mediaItems",
             "type": "array",
-            "of": [{"type": "image", "options": {"metadata": ["palette"], "hotspot": true}}],
-            "description": "One or more photos of the puppy."
+            "of": [{"type": "media"}],
+            "description": "One or more media items of the puppy (photos or videos)."
         },
         {
             "title": "Availability",

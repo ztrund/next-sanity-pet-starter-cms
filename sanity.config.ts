@@ -23,6 +23,22 @@ export default defineConfig({
 
                         // Our singleton type has a list item with a custom child
                         S.listItem()
+                            .title("Home Page")
+                            .id("homepage")
+                            .child(
+                                S.document()
+                                    .schemaType("homepage")
+                                    .documentId("homepage")
+                            ),
+                        S.listItem()
+                            .title("Youtube Settings")
+                            .id("youtubeSettings")
+                            .child(
+                                S.document()
+                                    .schemaType("youtubeSettings")
+                                    .documentId("youtubeSettings")
+                            ),
+                        S.listItem()
                             .title("About Us")
                             .id("about")
                             .child(
