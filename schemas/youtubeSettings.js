@@ -4,20 +4,20 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'channelId',
-            title: 'Channel ID',
-            type: 'string',
-            description: 'The YouTube channel ID',
+            name: 'channelUrl',
+            title: 'Channel URL',
+            type: 'url',
+            description: 'The YouTube channel URL',
         },
         {
-            name: 'fallbackVideoId',
-            title: 'Fallback Video ID',
-            type: 'string',
-            description: 'The video ID to display when the livestream is not live',
+            name: 'fallbackVideoUrl',
+            title: 'Fallback Video URL',
+            type: 'url',
+            description: 'The video URL to display when the livestream is not live',
         },
     ],
     initialValue: {
-        channelId: '',
-        fallbackVideoId: '',
+        channelUrl: '',
+        fallbackVideoUrl: '',
     },
 };
