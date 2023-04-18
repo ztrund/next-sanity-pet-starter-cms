@@ -4,17 +4,18 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'title',
-            title: 'Title',
-            type: 'string',
-            validation: Rule => Rule.required(),
-        },
-        {
             name: 'content',
             title: 'Content',
             type: 'array',
-            of: [{ type: 'block' }],
+            of: [{type: 'block'}],
             validation: Rule => Rule.required(),
+        },
+        {
+            title: "Media Items",
+            name: "mediaItems",
+            type: "array",
+            of: [{type: "media"}],
+            description: "One or more media items to show on about us page (photos or videos)."
         },
     ],
 };

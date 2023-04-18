@@ -1,5 +1,3 @@
-import media from "./media"
-
 export default {
     "title": "Puppies",
     "name": "puppies",
@@ -48,13 +46,6 @@ export default {
             "description": "A description of the puppy, including any important details or personality traits."
         },
         {
-            "title": "Media Items",
-            "name": "mediaItems",
-            "type": "array",
-            "of": [{"type": "media"}],
-            "description": "One or more media items of the puppy (photos or videos)."
-        },
-        {
             "title": "Availability",
             "name": "availability",
             "type": "string",
@@ -72,6 +63,20 @@ export default {
             "name": "price",
             "type": "number",
             "description": "The price of the item in USD."
+        },
+        {
+            "title": "Media Items",
+            "name": "mediaItems",
+            "type": "array",
+            "of": [{"type": "media"}],
+            "description": "One or more media items of the puppy (photos or videos)."
+        },
+        {
+            "title": "Parents",
+            "name": "parents",
+            "type": "array",
+            "of": [{"type": "reference", "to": [{"type": "parents"}]}],
+            "description": "The parent(s) of the puppy."
         }
     ]
 }

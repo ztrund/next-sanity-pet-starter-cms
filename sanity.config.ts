@@ -2,10 +2,12 @@ import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
+import {dashboardTool, projectInfoWidget, projectUsersWidget, sanityTutorialsWidget} from "@sanity/dashboard";
+import {iconPicker} from "sanity-plugin-icon-picker";
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
-const singletonTypes = new Set(["about"])
+const singletonTypes = new Set(["homepage", "youtubeSettings", "about", "contactInfo"])
 
 export default defineConfig({
     name: 'default',
@@ -42,31 +44,44 @@ export default defineConfig({
                             .title("About Us")
                             .id("about")
                             .child(
-                                // Instead of rendering a list of documents, we render a single
-                                // document, specifying the `documentId` manually to ensure
-                                // that we're editing the single instance of the document
                                 S.document()
                                     .schemaType("about")
                                     .documentId("about")
                             ),
+                        S.listItem()
+                            .title("Contact Information")
+                            .id("contactInfo")
+                            .child(
+                                S.document()
+                                    .schemaType("contactInfo")
+                                    .documentId("contactInfo")
+                            ),
 
                         // Regular document types
                         S.documentTypeListItem("puppies").title("Puppies"),
+                        S.documentTypeListItem("parents").title("Parents"),
                     ]),
         }),
-        visionTool()
+        visionTool(),
+        dashboardTool({
+            widgets: [
+                projectInfoWidget(),
+                projectUsersWidget(),
+            ]
+        }),
+        iconPicker(),
     ],
 
     schema: {
         types: schemaTypes,
         templates: (templates) =>
-            templates.filter(({ schemaType }) => !singletonTypes.has(schemaType)),
+            templates.filter(({schemaType}) => !singletonTypes.has(schemaType)),
     },
 
     document: {
         actions: (input, context) =>
             singletonTypes.has(context.schemaType)
-                ? input.filter(({ action }) => action && singletonActions.has(action))
+                ? input.filter(({action}) => action && singletonActions.has(action))
                 : input,
     },
 })
