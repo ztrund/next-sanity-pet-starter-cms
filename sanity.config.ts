@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {dashboardTool, projectInfoWidget, projectUsersWidget, sanityTutorialsWidget} from "@sanity/dashboard";
 import {iconPicker} from "sanity-plugin-icon-picker";
+import RebuildButtonWidget from "./src/rebuildButtonWidget";
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
@@ -67,6 +68,14 @@ export default defineConfig({
             widgets: [
                 projectInfoWidget(),
                 projectUsersWidget(),
+                {
+                    name: 'rebuildButton',
+                    layout: {
+                        width: 'full',
+                        height: 'auto',
+                    },
+                    component: RebuildButtonWidget,
+                },
             ]
         }),
         iconPicker(),
