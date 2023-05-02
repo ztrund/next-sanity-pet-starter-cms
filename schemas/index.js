@@ -5,5 +5,6 @@ import youtubeSettings from "./youtubeSettings"
 import media from "./objects/media"
 import parents from "./parents";
 import contactInfo from "./contactInfo";
+import companyInfo from "./companyInfo";
 
-export const schemaTypes = [homepage, about, puppies, youtubeSettings, media, parents, contactInfo,]
+export const schemaTypes = [homepage, about, puppies, youtubeSettings, media, parents, contactInfo, companyInfo]

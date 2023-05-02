@@ -8,7 +8,7 @@ import RebuildButtonWidget from "./src/rebuildButtonWidget";
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
-const singletonTypes = new Set(["homepage", "youtubeSettings", "about", "contactInfo"])
+const singletonTypes = new Set(["companyInfo", "homepage", "youtubeSettings", "about", "contactInfo"])
 
 export default defineConfig({
     name: 'default',
@@ -25,6 +25,14 @@ export default defineConfig({
                     .items([
 
                         // Our singleton type has a list item with a custom child
+                        S.listItem()
+                            .title("Company Information")
+                            .id("companyInfo")
+                            .child(
+                                S.document()
+                                    .schemaType("companyInfo")
+                                    .documentId("companyInfo")
+                            ),
                         S.listItem()
                             .title("Home Page")
                             .id("homepage")
