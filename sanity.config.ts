@@ -65,6 +65,14 @@ export default defineConfig({
                                     .schemaType("contactInfo")
                                     .documentId("contactInfo")
                             ),
+                        S.listItem()
+                            .title("Financing")
+                            .id("financing")
+                            .child(
+                                S.document()
+                                    .schemaType("financing")
+                                    .documentId("financing")
+                            ),
 
                         // Regular document types
                         S.documentTypeListItem("puppies").title("Puppies"),
