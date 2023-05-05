@@ -73,6 +73,14 @@ export default defineConfig({
                                     .schemaType("financing")
                                     .documentId("financing")
                             ),
+                        S.listItem()
+                            .title("Meta Descriptions")
+                            .id("metaDescriptions")
+                            .child(
+                                S.document()
+                                    .schemaType("metaDescriptions")
+                                    .documentId("metaDescriptions")
+                            ),
 
                         // Regular document types
                         S.documentTypeListItem("puppies").title("Puppies"),
