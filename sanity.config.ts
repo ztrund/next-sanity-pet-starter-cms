@@ -5,6 +5,9 @@ import {schemaTypes} from './schemas'
 import {dashboardTool, projectInfoWidget, projectUsersWidget, sanityTutorialsWidget} from "@sanity/dashboard";
 import {iconPicker} from "sanity-plugin-icon-picker";
 import RebuildButtonWidget from "./src/rebuildButtonWidget";
+import '/public/css/fontawesome.min.css';
+import '/public/css/brands.min.css';
+import '/public/css/solid.min.css';
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
@@ -23,7 +26,6 @@ export default defineConfig({
                 S.list()
                     .title("Content")
                     .items([
-
                         // Our singleton type has a list item with a custom child
                         S.listItem()
                             .title("Company Information")

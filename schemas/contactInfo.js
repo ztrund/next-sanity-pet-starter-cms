@@ -1,5 +1,4 @@
-// contactInfo.js
-import {preview} from "sanity-plugin-icon-picker";
+import React from 'react';
 
 export default {
     name: 'contactInfo',
@@ -45,7 +44,7 @@ export default {
                             day: 'day',
                             hours: 'hours',
                         },
-                        prepare({ day, hours }) {
+                        prepare({day, hours}) {
                             return {
                                 title: `${day}: ${hours}`,
                             };
@@ -75,24 +74,30 @@ export default {
                         {
                             name: 'icon',
                             title: 'Icon',
-                            type: 'iconPicker',
-                            options: {
-                                providers: ["fa"],
-                                outputFormat: 'react',
-                            }
+                            type: 'faIconPicker',
                         },
                     ],
                     preview: {
                         select: {
-                            icon: 'icon',
+                            icon: 'icon.icon',
                             platform: 'platform',
                             url: 'url',
                         },
-                        prepare({ icon, platform, url }) {
+                        prepare({icon, platform, url}) {
                             return {
                                 title: platform,
                                 subtitle: url,
-                                media: preview(icon),
+                                media: () => {
+                                    if (!icon) return null;
+
+                                    return React.createElement(
+                                        'i',
+                                        {
+                                            className: `${icon}`,
+                                        },
+                                        null
+                                    );
+                                },
                             };
                         },
                     },

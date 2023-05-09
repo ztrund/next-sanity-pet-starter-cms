@@ -8,5 +8,6 @@ import contactInfo from "./contactInfo";
 import companyInfo from "./companyInfo";
 import financing from "./financing";
 import metaDescriptions from "./metaDescriptions";
+import faIconPicker from "./objects/faIconPicker";
 
-export const schemaTypes = [homepage, about, puppies, youtubeSettings, media, parents, contactInfo, companyInfo, financing, metaDescriptions]
+export const schemaTypes = [homepage, about, puppies, youtubeSettings, media, parents, contactInfo, companyInfo, financing, metaDescriptions, faIconPicker]
