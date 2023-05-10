@@ -8,11 +8,11 @@ const getIconOptions = () => {
     for (const iconName in iconsData) {
         const icon = iconsData[iconName];
         const iconPrefix = icon.styles[0];
+        const iconUnicode = icon.unicode;
         if (iconPrefix === "brands") {
             options.push({
-                label: `${iconName} (${iconPrefix})`,
                 title: `${iconName} (${iconPrefix})`,
-                value: `fa-${iconPrefix} fa-${iconName}`,
+                value: `fa-${iconPrefix} fa-${iconName} & ${iconUnicode}`,
             });
         }
     }
