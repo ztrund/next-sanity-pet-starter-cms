@@ -17,5 +17,42 @@ export default {
             of: [{type: "media"}],
             description: "One or more media items to show on about us page (photos or videos)."
         },
+        {
+            name: 'team',
+            title: 'Team',
+            type: 'array',
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        {
+                            name: 'name',
+                            title: 'Name',
+                            type: 'string'
+                        },
+                        {
+                            name: 'position',
+                            title: 'Position',
+                            type: 'string'
+                        },
+                        {
+                            name: 'image',
+                            title: 'Image',
+                            type: 'image',
+                            options: {
+                                hotspot: true
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: 'teamDescription',
+            title: 'Team Description',
+            type: 'array',
+            of: [{type: 'block'}],
+            validation: Rule => Rule.required(),
+        }
     ],
 };
