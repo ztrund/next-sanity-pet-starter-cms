@@ -2,7 +2,7 @@ import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
-import {dashboardTool, projectInfoWidget, projectUsersWidget, sanityTutorialsWidget} from "@sanity/dashboard";
+import {dashboardTool, projectInfoWidget, projectUsersWidget} from "@sanity/dashboard";
 import {iconPicker} from "sanity-plugin-icon-picker";
 import RebuildButtonWidget from "./src/rebuildButtonWidget";
 import '/public/css/fontawesome.min.css';
@@ -11,7 +11,7 @@ import '/public/css/solid.min.css';
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
-const singletonTypes = new Set(["companyInfo", "homepage", "youtubeSettings", "about", "contactInfo"])
+const singletonTypes = new Set(["companyInfo", "homepage", "youtubeSettings", "about", "contactInfo", "financing", "metaDescriptions"])
 
 export default defineConfig({
     name: 'default',
