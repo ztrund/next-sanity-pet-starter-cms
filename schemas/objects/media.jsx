@@ -17,6 +17,7 @@ export default {
                     {title: "Video", value: "video"},
                 ],
             },
+            validation: Rule => Rule.required(),
         },
         {
             title: "Image",

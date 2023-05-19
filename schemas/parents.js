@@ -51,7 +51,13 @@ export default {
             type: "array",
             of: [{type: "media"}],
             description: "One or more media items of the parent (photos or videos).",
-            validation: (Rule) => Rule.required(),
+            validation: (Rule) => Rule.required().custom((mediaItems) => {
+                if (!mediaItems) {
+                    return 'At least one Image is required';
+                }
+                const imageItems = mediaItems.filter(item => item.type === 'image');
+                return imageItems.length > 0 ? true : 'At least one Image is required';
+            }),
         },
     ],
 };
