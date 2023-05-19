@@ -23,13 +23,27 @@ export default {
             name: "image",
             type: "image",
             options: {metadata: ["palette"], hotspot: true},
-            hidden: ({parent}) => parent?.type !== "image"
+            hidden: ({parent}) => parent?.type !== "image",
+            validation: Rule => Rule.custom((field, context) => {
+                // If type is "image", ensure this field is filled
+                if (context.parent?.type === 'image' && !field) {
+                    return 'An image is required';
+                }
+                return true;  // Otherwise, it's valid
+            }),
         },
         {
             title: "Video URL",
             name: "videoUrl",
             type: "url",
-            hidden: ({parent}) => parent?.type !== "video"
+            hidden: ({parent}) => parent?.type !== "video",
+            validation: Rule => Rule.custom((field, context) => {
+                // If type is "video", ensure this field is filled
+                if (context.parent?.type === 'video' && !field) {
+                    return 'A video URL is required';
+                }
+                return true;  // Otherwise, it's valid
+            }),
         },
     ],
     input: ({set}) => {

@@ -7,6 +7,7 @@ export default {
             name: 'companyName',
             title: 'Company Name',
             type: 'string',
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'companyLogo',
