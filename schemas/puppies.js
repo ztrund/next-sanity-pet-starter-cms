@@ -79,9 +79,31 @@ export default {
         {
             title: "Parents",
             name: "parents",
-            type: "array",
-            of: [{type: "reference", to: [{type: "parents"}]}],
-            description: "The parent(s) of the puppy.",
+            type: "object",
+            fields: [
+                {
+                    title: "Mother",
+                    name: "mother",
+                    type: "reference",
+                    to: [{type: "parents"}],
+                    options: {
+                        filter: 'gender == "Female"',
+                        disableNew: true,
+                    },
+                    description: "The mother of the puppy.",
+                },
+                {
+                    title: "Father",
+                    name: "father",
+                    type: "reference",
+                    to: [{type: "parents"}],
+                    options: {
+                        filter: 'gender == "Male"',
+                        disableNew: true,
+                    },
+                    description: "The father of the puppy.",
+                },
+            ]
         },
     ],
 };
