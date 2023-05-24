@@ -13,5 +13,16 @@ export default {
             title: 'Link',
             type: 'url',
         },
+        {
+            name: 'logo',
+            title: 'Logo',
+            type: 'image',
+        },
+        {
+            name: 'text',
+            title: 'Text',
+            type: 'array',
+            of: [{ type: 'block' }],
+        },
     ],
 }
