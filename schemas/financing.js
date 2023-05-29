@@ -24,5 +24,18 @@ export default {
             type: 'array',
             of: [{ type: 'block' }],
         },
+        {
+            name: 'displayOption',
+            title: 'Display Option on Puppy Pages',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Banner', value: 'banner' },
+                    { title: 'Container (Logo and Text)', value: 'container' },
+                    { title: 'None', value: 'none' },
+                ],
+                layout: 'radio',
+            },
+        },
     ],
 }
