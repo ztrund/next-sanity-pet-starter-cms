@@ -25,12 +25,49 @@ export default {
             of: [{ type: 'block' }],
         },
         {
-            name: 'displayOption',
+            name: 'displayOptionPuppy',
             title: 'Display Option on Puppy Pages',
             type: 'string',
             options: {
                 list: [
                     { title: 'Banner', value: 'banner' },
+                    { title: 'Container (Logo and Text)', value: 'container' },
+                    { title: 'None', value: 'none' },
+                ],
+                layout: 'radio',
+            },
+        },
+        {
+            name: 'displayOptionParent',
+            title: 'Display Option on Parent Pages',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Banner', value: 'banner' },
+                    { title: 'Container (Logo and Text)', value: 'container' },
+                    { title: 'None', value: 'none' },
+                ],
+                layout: 'radio',
+            },
+        },
+        {
+            name: 'displayOptionPuppies',
+            title: 'Display Option on Puppies Page',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Container (Logo and Text)', value: 'container' },
+                    { title: 'None', value: 'none' },
+                ],
+                layout: 'radio',
+            },
+        },
+        {
+            name: 'displayOptionParents',
+            title: 'Display Option on Parents Page',
+            type: 'string',
+            options: {
+                list: [
                     { title: 'Container (Logo and Text)', value: 'container' },
                     { title: 'None', value: 'none' },
                 ],
