@@ -93,7 +93,7 @@ export default {
                                     return React.createElement(
                                         'i',
                                         {
-                                            className: `${icon}`,
+                                            className: `fa-brands fa-${icon.split(' & ')[0]}`,
                                         },
                                         null
                                     );
