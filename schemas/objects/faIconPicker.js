@@ -1,6 +1,6 @@
 import React from 'react';
 import iconsData from './fontawesome-icons.json';
-import SearchableDropdown from "../../src/searchableDropdown";
+// import SearchableDropdown from "../../src/searchableDropdown";
 
 const getIconOptions = () => {
     const options = [];

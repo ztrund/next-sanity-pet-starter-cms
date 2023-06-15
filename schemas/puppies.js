@@ -60,7 +60,6 @@ export default {
             name: "price",
             type: "number",
             description: "The price of the item in USD.",
-            validation: (Rule) => Rule.required(),
         },
         {
             title: "Media Items",
