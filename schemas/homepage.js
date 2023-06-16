@@ -21,6 +21,7 @@ export default {
             title: 'Fallback Video URL',
             type: 'url',
             description: 'The video URL to display when the livestream is not live',
+            validation: Rule => Rule.required(),
         },
     ],
 };
