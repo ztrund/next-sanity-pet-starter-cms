@@ -11,7 +11,7 @@ import '/public/css/solid.min.css';
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
-const singletonTypes = new Set(["companyInfo", "homepage", "youtubeSettings", "about", "contactInfo", "financing", "metaDescriptions"])
+const singletonTypes = new Set(["companyInfo", "homepage", "about", "contactInfo", "financing", "metaDescriptions"])
 
 export default defineConfig({
     name: 'default',
@@ -42,14 +42,6 @@ export default defineConfig({
                                 S.document()
                                     .schemaType("homepage")
                                     .documentId("homepage")
-                            ),
-                        S.listItem()
-                            .title("Youtube Settings")
-                            .id("youtubeSettings")
-                            .child(
-                                S.document()
-                                    .schemaType("youtubeSettings")
-                                    .documentId("youtubeSettings")
                             ),
                         S.listItem()
                             .title("About Us")

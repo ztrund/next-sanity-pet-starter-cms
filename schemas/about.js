@@ -28,7 +28,8 @@ export default {
                         {
                             name: 'name',
                             title: 'Name',
-                            type: 'string'
+                            type: 'string',
+                            validation: Rule => Rule.required()
                         },
                         {
                             name: 'position',
@@ -41,7 +42,8 @@ export default {
                             type: 'image',
                             options: {
                                 hotspot: true
-                            }
+                            },
+                            validation: Rule => Rule.required()
                         }
                     ]
                 }
@@ -52,7 +54,6 @@ export default {
             title: 'Team Description',
             type: 'array',
             of: [{type: 'block'}],
-            validation: Rule => Rule.required(),
         }
     ],
 };
