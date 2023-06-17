@@ -32,11 +32,13 @@ export default {
                             name: 'day',
                             title: 'Day(s)',
                             type: 'string',
+                            validation: Rule => Rule.required(),
                         },
                         {
                             name: 'hours',
                             title: 'Hours',
                             type: 'string',
+                            validation: Rule => Rule.required(),
                         },
                     ],
                     preview: {
@@ -65,11 +67,13 @@ export default {
                             name: 'platform',
                             title: 'Platform',
                             type: 'string',
+                            validation: Rule => Rule.required(),
                         },
                         {
                             name: 'url',
                             title: 'URL',
                             type: 'url',
+                            validation: Rule => Rule.required(),
                         },
                         {
                             name: 'icon',

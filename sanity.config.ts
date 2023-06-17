@@ -5,9 +5,9 @@ import {schemaTypes} from './schemas'
 import {dashboardTool, projectInfoWidget, projectUsersWidget} from "@sanity/dashboard";
 import {iconPicker} from "sanity-plugin-icon-picker";
 import RebuildButtonWidget from "./src/rebuildButtonWidget";
-import '/public/css/fontawesome.min.css';
-import '/public/css/brands.min.css';
-import '/public/css/solid.min.css';
+import '/css/fontawesome.min.css';
+import '/css/brands.min.css';
+import '/css/solid.min.css';
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
