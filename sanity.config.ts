@@ -3,7 +3,6 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {dashboardTool, projectInfoWidget, projectUsersWidget} from "@sanity/dashboard";
-import {iconPicker} from "sanity-plugin-icon-picker";
 import RebuildButtonWidget from "./src/rebuildButtonWidget";
 import '/css/fontawesome.min.css';
 import '/css/brands.min.css';
