@@ -96,7 +96,6 @@ export default defineConfig({
                 },
             ]
         }),
-        iconPicker(),
     ],
 
     schema: {
