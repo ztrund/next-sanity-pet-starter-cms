@@ -28,6 +28,13 @@ SANITY_STUDIO_PROJECT_ID=
 SANITY_STUDIO_DATASET=
 ```
 
+## Acknowledgments
+
+### Icons
+
+- Icons from [Font Awesome](https://fontawesome.com/) are used under
+  the [Font Awesome Free License](https://fontawesome.com/license/free).
+
 ## License
 
 [MIT](LICENSE)
