@@ -7,6 +7,7 @@ import RebuildButtonWidget from "./src/rebuildButtonWidget";
 import '/css/fontawesome.min.css';
 import '/css/brands.min.css';
 import '/css/solid.min.css';
+import {dataset, projectId, title} from "./src/environment";
 
 const singletonActions = new Set(["publish", "discardChanges", "restore"])
 
@@ -14,10 +15,10 @@ const singletonTypes = new Set(["companyInfo", "homepage", "about", "contactInfo
 
 export default defineConfig({
     name: 'default',
-    title: 'All In One Frenchies CMS',
+    title: title,
 
-    projectId: 'fcb9r3pv',
-    dataset: 'production',
+    projectId: projectId,
+    dataset: dataset,
 
     plugins: [
         deskTool({
