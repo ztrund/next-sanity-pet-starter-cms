@@ -1,4 +1,4 @@
-# Next-Sanity-Pet-Starter-CMS
+# Next Sanity Pet Starter CMS
 
 This repository contains the Sanity CMS for
 the [Next Sanity Pet Starter](https://github.com/ztrund/next-sanity-pet-starter) project. This CMS serves as the
